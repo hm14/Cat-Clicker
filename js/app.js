@@ -79,6 +79,11 @@ var ViewModel = function() {
 
 	self.currentCat = ko.observable(self.catList()[0]);
 
+	// set current cat to clicked cat
+	self.setCat = function(clickedCat) {
+		self.currentCat(clickedCat);
+	};
+
 	// increase click count for each click
 	self.incrementCounter = function() {
 		self.currentCat().clickCount(self.currentCat().clickCount() + 1);
