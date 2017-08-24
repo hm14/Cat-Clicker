@@ -24,8 +24,11 @@ var Cat = function() {
 		else if (self.clickCount() > 50 && self.clickCount() <= 100) {
 			return "Little wonder"
 		}
-		else if(self.clickCount() > 100) {
+		else if(self.clickCount() > 100 && self.clickCount() <= 101) {
 			return "Rockstar!"
+		}
+		else {
+			return "Go get a life!"
 		}
 	});
 }
