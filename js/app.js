@@ -2,10 +2,10 @@
 
 var ViewModel = function() {
 	var self = this;
-	self.clickCount = ko.observable(0);
 	self.name = ko.observable('Catilicious');
-	//self.title = ko.observable('newbie');
+	self.clickCount = ko.observable(0);
 	self.imgUrl = ko.observable('https://cdn.pixabay.com/photo/2016/08/10/02/55/kitten-1582384_960_720.jpg');
+	self.nicknames = ko.observable(['Catty', 'Lush', 'Tilly']);
 
 
 	self.incrementCounter = function() {
