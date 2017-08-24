@@ -1,22 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Cat Clicker</title>
-</head>
-<body>
-    <ul id="cat-list"></ul>
-    <div id="cat">
-        <h2 data-bind="text: name" id="cat-name"></h2>
-        <div data-bind="text: title" id="title"></div>
-        <div data-bind="text: clickCount" id="clicks"></div>
-        <img id="cat-img" src="" alt="cat image" height=400 data-bind="click: incrementCounter, attr: {src: imgUrl}" >
-        <h3>Nicknames</h3>
-        <ul data-bind="foreach: nicknames">
-          <li data-bind="text: $data"></li>
-        </ul>
-    </div>
-    <script src="lib/knockout-3.4.2.js"></script>
-    <script src="js/app.js"></script>
-</body>
-</html>
+// MODEL
+
+var Cat = function() {
+	var self = this;
+	self.clickCount = ko.observable(0);
+	self.name = ko.observable('Catilicious');
+	self.imgUrl = ko.observable('https://cdn.pixabay.com/photo/2016/08/10/02/55/kitten-1582384_960_720.jpg');
+	self.nicknames = ko.observable(['Catty', 'Lush', 'Tilly']);
+
+	// set cat title based on number of clicks
+	self.title = ko.computed(function() {
+		if(self.clickCount() >= 0 && self.clickCount() <= 5) {
+			return "Newbie"
+		}
+		else if (self.clickCount() > 5 && self.clickCount() <= 10) {
+			return "Cutie"
+		}
+		else if (self.clickCount() > 10 && self.clickCount() <= 25) {
+			return "Cutie pie"
+		}
+		else if (self.clickCount() > 25 && self.clickCount() <= 50) {
+			return "Picking steam"
+		}
+		else if (self.clickCount() > 50 && self.clickCount() <= 100) {
+			return "Little wonder"
+		}
+		else if(self.clickCount() > 100) {
+			return "Rockstar!"
+		}
+	});
+}
+
+// VIEW MODEL
+
+var ViewModel = function() {
+	var self = this;
+	self.currentCat = ko.observable(new Cat());
+
+	// increase click count for each click
+	self.incrementCounter = function() {
+		self.currentCat().clickCount(self.currentCat().clickCount() + 1);
+	};
+};
+
+var vm = new ViewModel();
+ko.applyBindings(vm);
+
+// ko.applyBindings(new ViewModel());
