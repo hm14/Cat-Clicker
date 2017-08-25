@@ -4,7 +4,7 @@ var initialCats = [
 		{
 			clickCount: 0,
 			name: 'Catilicious',
-			imgUrl: 'https://cdn.pixabay.com/photo/2016/08/10/02/55/kitten-1582384_960_720.jpg',
+			imgUrl: 'http://www.cutestpaw.com/wp-content/uploads/2011/11/HALP.jpeg',
 			nicknames: ['Catty', 'Lush', 'Tilly']
 		},
 		{
