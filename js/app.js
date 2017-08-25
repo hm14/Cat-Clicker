@@ -16,7 +16,7 @@ var initialCats = [
 		{
 			clickCount: 0,
 			name: 'Kit Kat',
-			imgUrl: 'https://cdn.pixabay.com/photo/2014/03/29/09/17/cat-300572_960_720.jpg',
+			imgUrl: 'https://ae01.alicdn.com/kf/HTB1Zjq5MVXXXXbDXVXXq6xXFXXXe/Animal-A-font-b-brown-b-font-cat-font-b-eyes-b-font-close-up-4.jpg',
 			nicknames: ['Kitty', 'Choco', 'Coco']
 			},
 		{
