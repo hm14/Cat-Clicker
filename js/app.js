@@ -22,7 +22,7 @@ var initialCats = [
 		{
 			clickCount: 0,
 			name: 'Pepper',
-			imgUrl: 'https://cdn.pixabay.com/photo/2016/07/10/21/47/cat-1508613_960_720.jpg',
+			imgUrl: 'https://s-media-cache-ak0.pinimg.com/736x/88/50/2b/88502b58b2ca3509be47473044fde8cc--wink-wink-adorable-animals.jpg',
 			nicknames: ['Peppep', 'Peppy']
 			},
 		{
